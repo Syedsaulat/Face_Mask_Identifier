@@ -16,28 +16,6 @@ OpenCV - For capturing video and performing face detection.
 Numpy & Matplotlib - For data handling and visualization.
 Setup Instructions
 Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/[YourUsername]/face-mask-detection.git
+git clone https://github.com/Syedsaulat/Face_Mask_Identifier.git
 Install the dependencies: Create and activate a virtual environment (optional but recommended):
-
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-Install the required Python libraries:
-
-bash
-Copy code
-pip install -r requirements.txt
-Download the pre-trained model:
-
-Download the face mask detection model (mask_detector.h5 or .keras) from the source or your saved location.
-Place the model file in the project directory.
-Run the application:
-
-bash
-Copy code
-python mask_detector.py
 The system will start the video stream and detect whether the person in front of the camera is wearing a mask or not. If a mask is detected, the system will display "Mask" in green; if no mask is detected, it will display "No Mask" in red.
