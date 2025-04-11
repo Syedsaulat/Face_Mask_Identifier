@@ -1,0 +1,15 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Mask Identifier
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Syed Mohammad Saulat Bukhari
+    family-names: Bukhari
+    name-suffix: Mr.
+    email: havisyed3@gmail.com
+orcid: 0000-0002-0000-0000

@@ -1,0 +1,76 @@
+Face Mask Detection - How to Run
+================================
+
+System Requirements:
+------------------
+- Python 3.11 or higher
+- Webcam (for real-time detection)
+- CUDA-capable GPU (optional, for better performance)
+
+Installation Steps:
+------------------
+1. Create and activate a virtual environment:
+   Windows:
+   python -m venv venv
+   .\venv\Scripts\activate
+
+   Linux/Mac:
+   python3 -m venv venv
+   source venv/bin/activate
+
+2. Install required packages:
+   pip install -r requirements.txt
+
+Running the Application:
+----------------------
+There are three ways to use the Face Mask Detection system:
+
+1. Real-time Video Detection (using webcam):
+   python detect_mask_video.py
+   - Press 'q' to quit the application
+
+2. Image Detection:
+   python detect_mask_image.py --image path/to/your/image.jpg
+   Example: python detect_mask_image.py --image images/pic1.jpeg
+
+3. Web Interface (Streamlit):
+   streamlit run app.py
+   - Open the URL shown in the terminal (usually http://localhost:8501)
+   - Upload an image or use your webcam through the web interface
+
+4. CPU-Only Mode (if no GPU available):
+   python cpu_app.py
+
+Training Your Own Model (Optional):
+--------------------------------
+To train the mask detection model on your own dataset:
+1. Organize your dataset in the following structure:
+   dataset/
+   ├── with_mask/
+   │   └── (your mask images)
+   └── without_mask/
+       └── (your no-mask images)
+
+2. Run the training script:
+   python train_mask_detector.py --dataset dataset
+
+Common Issues and Solutions:
+--------------------------
+1. If you get GPU-related errors:
+   - Make sure you have NVIDIA GPU drivers installed
+   - Try running the CPU-only version (cpu_app.py)
+
+2. If the webcam doesn't work:
+   - Check if your webcam is properly connected
+   - Try running with administrator/sudo privileges
+   - Verify webcam permissions in your OS settings
+
+3. For "ImportError: DLL load failed" on Windows:
+   - Install Visual C++ Redistributable
+   - Reinstall OpenCV: pip uninstall opencv-python && pip install opencv-python
+
+For more information:
+-------------------
+- Check CHANGELOG.md for version updates
+- Visit our GitHub repository for detailed documentation
+- Report issues on our GitHub issue tracker
